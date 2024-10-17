@@ -49,10 +49,10 @@ const swiperOptions = reactive({
 const modules = reactive([Navigation])
 
 const links = reactive([
-    { title: 'Веб-Программирование', url: '/courses/web-development', descr: 'Создание сайтов и веб-приложений', img: 'https://raw.githubusercontent.com/Migetsu/OwoFiles/refs/heads/main/courses_img-1.webp?token=GHSAT0AAAAAACY77MXZNTLPVF2GOQ2YP5FQZYRQHOQ' },
-    { title: 'Blender', url: '/courses/blender', descr: 'Основы 3D графики. Полное погружение в 3D визуализацию и анимацию', img: 'https://raw.githubusercontent.com/Migetsu/OwoFiles/refs/heads/main/courses_img-2.webp?token=GHSAT0AAAAAACY77MXYEL6UZ5ACFHQZANM6ZYRQHZQ' },
-    { title: 'Python', url: '/courses/python', descr: 'Создание интернет магазинов, веб-приложений и Telegram ботов', img: 'https://raw.githubusercontent.com/Migetsu/OwoFiles/refs/heads/main/courses_img-3.webp?token=GHSAT0AAAAAACY77MXY3WCSDCKARKBHXAG6ZYRQIBA' },
-    { title: 'Системный Администратор', url: '/courses/computers', descr: 'Начальный этап подготовки IT-специалистов и системных администраторов', img: 'https://raw.githubusercontent.com/Migetsu/OwoFiles/refs/heads/main/courses_img-4.webp?token=GHSAT0AAAAAACY77MXYYZW73VZRF3XZACL6ZYRQIKA' }
+    { title: 'Веб-Программирование', url: '/courses/web-development', descr: 'Создание сайтов и веб-приложений', img: 'https://raw.githubusercontent.com/M1getsu/OwoFiles/refs/heads/main/courses_img-1.webp' },
+    { title: 'Blender', url: '/courses/blender', descr: 'Основы 3D графики. Полное погружение в 3D визуализацию и анимацию', img: 'https://raw.githubusercontent.com/M1getsu/OwoFiles/refs/heads/main/courses_img-2.webp' },
+    { title: 'Python', url: '/courses/python', descr: 'Создание интернет магазинов, веб-приложений и Telegram ботов', img: 'https://raw.githubusercontent.com/M1getsu/OwoFiles/refs/heads/main/courses_img-3.webp' },
+    { title: 'Системный Администратор', url: '/courses/computers', descr: 'Начальный этап подготовки IT-специалистов и системных администраторов', img: 'https://raw.githubusercontent.com/M1getsu/OwoFiles/refs/heads/main/courses_img-4.webp' }
 ])
 </script>
 
