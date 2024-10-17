@@ -1,0 +1,64 @@
+.header {
+    &__nav {
+        background: rgba(20, 20, 20, 0.5);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+
+        &.color {
+            animation: scroll 1s forwards linear;
+        }
+
+        &-logo {
+            position: relative;
+            z-index: 150;
+        }
+
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &-link {
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: 0%;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 34px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            background: transparent;
+        }
+
+        100% {
+            background: black;
+        }
+    }
+}
