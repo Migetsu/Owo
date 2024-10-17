@@ -16,9 +16,9 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 
-const numberOfIcon = reactive(1)
-const numOfText = reactive(1)
-const info = reactive([
+var numberOfIcon = reactive(1)
+var numOfText = reactive(1)
+var info = reactive([
     { title_1: '0 лет', title_2: 'Обучаем IT', img: 'https://3.downloader.disk.yandex.ru/preview/4bb4ada7e2a89ca2f14143e68d5a1b7e81c9fad1b0c5c8c3acc1923528a55713/inf/dNTaFzdjLAonwdBkbbrdMUayuphZBjjQQLxFNX-LJ3E15_XuMF2AL5R1yrP7awifM3nW4GsRdQtFM2DF57Leaw%3D%3D?uid=1455971601&filename=arrow.webp&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1455971601&tknv=v2&size=1912x920', text: `С 2010 года мы даем возможность освоить профессию в сфере Digital и IT. На сегодняшний день мы обучили и выпустили более 16 000 студентов по 4 направлениям.` },
     { title_1: '1 курс -', title_2: '1 профессия', img: 'https://3.downloader.disk.yandex.ru/preview/abaec995b41d97ca40c8a273006b3dc0e49c9cade8453d6bf1b92b9680aced4b/inf/oIU-JtSGy4JFZz7R69MDRAHT-IzSoW41wSAdHWj3gdevA38EG2-QF4tHri0EzQosLvLNFRMAETOSGdsQ7hic9g%3D%3D?uid=1455971601&filename=star.webp&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1455971601&tknv=v2&size=1912x920', text: 'Среди множества IT-курсов именно наши программы обучения адаптированы под реальные требования рынка. Таким образом каждый из вас сможет стать полноценным начинающим специалистом и обладать навыками, которые необходимы для успешного трудоустройства.' },
     { title_1: 'Практический', title_2: 'Курс', img: 'https://3.downloader.disk.yandex.ru/preview/1b4c0f7ce04c36009207891d1a2a241ff0a54e03a38d6c7cec623948d0ba3177/inf/htNClO-ndP4ptszayLjB9kayuphZBjjQQLxFNX-LJ3E1b13gCnqhQ8K-FsCMd9NEP6Ty2Somd9Q7PlZPJdGR8Q%3D%3D?uid=1455971601&filename=almost_triangle.webp&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1455971601&tknv=v2&size=1912x920', text: 'Чтобы полноценно освоить профессию, программы наших курсов содержат в себе не только актуальную теорию, но и 80% практики. Все занятия будут проходить в полностью оборудованном кабинете с современной техникой.' },
