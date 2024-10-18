@@ -26,7 +26,8 @@ import { ref, reactive, onMounted } from 'vue'
 const links = reactive([
     {title: 'Главная', url: '/'},
     {title: 'Курсы', url: ''},
-    {title: 'Контакты', url: '/contacts'}
+    {title: 'Контакты', url: '/contacts'},
+    {title: 'Трудоустройство', url: '/employment'},
 ])
 
 const scrolled = ref(0)

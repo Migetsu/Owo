@@ -11,5 +11,6 @@ export const routers = createRouter({
         {path: '/courses/blender', name: 'blender', component: () => import('@/pages/courses/Blender.vue')},
         {path: '/courses/web-development', name: 'web-development', component: () => import('@/pages/courses/Web-development.vue')},
         {path: '/courses/python', name: 'python', component: () => import('@/pages/courses/Python.vue')},
+        {path: '/employment', name: 'employment', component: () => import('@/pages/Employment.vue')},
     ]
 })

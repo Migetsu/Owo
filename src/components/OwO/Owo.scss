@@ -52,12 +52,5 @@
         max-width: 960px;
         width: 100%;
         text-align: center;
-
-        @include media(800) {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
     }
 }
