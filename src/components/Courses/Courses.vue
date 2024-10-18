@@ -11,5 +11,5 @@ import CoursesItem from '@/components/Courses/CoursesItem.vue'
 </script>
 
 <style>
-/* 123123123 */
+
 </style>
