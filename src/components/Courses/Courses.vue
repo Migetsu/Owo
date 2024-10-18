@@ -10,4 +10,6 @@
 import CoursesItem from '@/components/Courses/CoursesItem.vue'
 </script>
 
-<style></style>
+<style>
+/* 123123123 */
+</style>
