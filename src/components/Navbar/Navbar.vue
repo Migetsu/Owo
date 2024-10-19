@@ -27,7 +27,7 @@ const links = reactive([
     {title: 'Главная', url: '/'},
     {title: 'Курсы', url: ''},
     {title: 'Контакты', url: '/contacts'},
-    {title: 'Трудоустройство', url: '/employment'},
+    // {title: 'Трудоустройство', url: '/employment'},
 ])
 
 const scrolled = ref(0)
