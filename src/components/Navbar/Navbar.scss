@@ -7,6 +7,7 @@
         top: 0;
         z-index: 100;
         width: 100%;
+        padding: 0 40px;
 
         // &.color {
         //     animation: scroll 1s forwards linear;
@@ -15,6 +16,12 @@
         &-logo {
             position: relative;
             z-index: 150;
+
+            & span {
+                font-size: 35px;
+                color: #fff;
+                margin-left: 10px;
+            }
         }
 
         &-container {
@@ -27,7 +34,7 @@
         &-list {
             display: flex;
             align-items: center;
-            gap: 30px;
+            // gap: 30px;
             background: transparent;
         }
 
@@ -36,7 +43,7 @@
             line-height: 21px;
             letter-spacing: 0%;
             color: rgba(255, 255, 255, 0.6);
-            padding: 34px 0;
+            padding: 25px 0;
             position: relative;
             display: flex;
             justify-content: center;

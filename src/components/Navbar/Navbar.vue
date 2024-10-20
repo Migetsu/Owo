@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <nav class="header__nav" :class="{ color: scrolled > 0 }">
-            <div class="container">
+            <!-- <div class="container"> -->
                 <div class="header__nav-container">
                     <!-- <router-link to="/" class="header__nav-logo">
                         <img src="@/assets/images/logo.svg" alt="">
@@ -29,7 +29,11 @@
                         
                         <el-menu-item class="header__nav-logo" index="/">
                             <img src="@/assets/images/logo.svg" alt="OwO logo"/>
+                            <span header__nav-logo-name>OwO</span>
                         </el-menu-item>
+                        <!-- <el-menu-item class="header__nav-logo" index="/">
+                            <span>OwO</span>
+                        </el-menu-item> -->
                     </el-menu>
 
                     <el-menu 
@@ -54,7 +58,7 @@
                         <el-menu-item  class="header__nav-link" index="/contacts">Контакты</el-menu-item>
                     </el-menu>
                 </div>
-            </div>
+            <!-- </div> -->
         </nav>
     </header>
 </template>
