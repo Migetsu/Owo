@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import './style.scss'
 import '@/assets/style/main.scss'
 import App from './App.vue'
 import { createPinia } from 'pinia';
@@ -9,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 const app = createApp(App)
 const pinia = createPinia()
@@ -22,6 +23,7 @@ app.use(VueLazyload, {
 
 library.add(fas, far, fab)
 app.component('fa', FontAwesomeIcon)
+app.use(ElementPlus)
 app.use(routers)
 app.use(pinia)
 app.mount('#app')

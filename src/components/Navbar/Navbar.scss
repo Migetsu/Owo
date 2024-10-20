@@ -1,15 +1,16 @@
 .header {
     &__nav {
-        background: rgba(20, 20, 20, 0.5);
+        // background: rgba(20, 20, 20, 0.5);
+        background: black;
         position: fixed;
         left: 0;
         top: 0;
         z-index: 100;
         width: 100%;
 
-        &.color {
-            animation: scroll 1s forwards linear;
-        }
+        // &.color {
+        //     animation: scroll 1s forwards linear;
+        // }
 
         &-logo {
             position: relative;
@@ -27,12 +28,7 @@
             display: flex;
             align-items: center;
             gap: 30px;
-        }
-
-        &-list {
-            display: flex;
-            align-items: center;
-            gap: 30px;
+            background: transparent;
         }
 
         &-link {
@@ -45,9 +41,8 @@
             display: flex;
             justify-content: center;
 
-
             &:hover {
-                color: white;
+                color: white !important;
             }
         }
     }

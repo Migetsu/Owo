@@ -90,7 +90,7 @@
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2997.5523728452945!2d69.27177282134562!3d41.29684561312473!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b3b442ddee7%3A0x49dc1f971760f653!2sKorzinka%20%E2%80%94%20Oybek!5e0!3m2!1sru!2sus!4v1729364564199!5m2!1sru!2sus"
                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="location__content-item-map-name"><span>Чиланзар</span></div>
+                            <div class="location__content-item-map-name"><span>Айбек</span></div>
                         </div>
                     </div>
                     <div class="location__content-item">
@@ -108,7 +108,7 @@
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2119.544512779723!2d69.27207490985525!3d41.29823335457916!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8adb1b5ad333%3A0xe3d72e38a99a023b!2sLes%20Ailes!5e0!3m2!1sru!2sus!4v1729364602998!5m2!1sru!2sus"
                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="location__content-item-map-name"><span>Чиланзар</span></div>
+                            <div class="location__content-item-map-name"><span>Айбек</span></div>
                         </div>
                     </div>
                 </div>
