@@ -31,6 +31,10 @@
                 </div>
             </div>
         </section>
+        <section class="moreInfo">
+                <h3 class="moreInfo__title">Подробнее о курсе</h3>
+                <p class="moreInfo__descr">На курсе ВЕБ ПРОГРАММИРОВАНИЕ вы изучите основные языки программирования, научитесь создавать современные сайты, познакомитесь с инструментами, которые используют успешные веб-разработчики. <br> <br> Всего за 80 уроков (10 месяцев) вы освоите все необходимые навыки для полноценной профессии.</p>
+        </section>
         <section class="programm">
             <h2 class="programm__title">Программа Курса</h2>
 
@@ -39,59 +43,144 @@
                 class="programm__tab-item"
                 v-for="item in tabItems"
                 :key="item.id"
-                :class="{ active: activeItem === item.id}"
+                :class="{ activeS: activeItem === item.id}"
                 @click="setActive(item.id)"
                 >{{ item.text }}</div>
-                <!-- <div class="programm__tab-item">Модуль №2</div>
-                <div class="programm__tab-item">Модуль №3-4</div>
-                <div class="programm__tab-item">Модуль №5</div> -->
             </div>
 
-            <div class="demo-collapse programm__dropdown">
-                <el-collapse v-model="activeNames" @change="handleChange">
+            <h3 class="programm__subtitle" v-if="activeItem == 1">1 месяц</h3>
+            <p class="programm__descr" v-if="activeItem == 1">Основы верстки сайтов - HTML, CSS, Figma.</p>
+            <h3 class="programm__subtitle" v-if="activeItem == 2">2-3 месяц</h3>
+            <p class="programm__descr" v-if="activeItem == 2">Система контроля версиями Git и методология БЭМ</p>
+            <h3 class="programm__subtitle" v-if="activeItem == 3">4-5 месяц</h3>
+            <p class="programm__descr" v-if="activeItem == 3">Основы JavaScript.
+                Взаимодействие с пользователем.</p>
+            <h3 class="programm__subtitle" v-if="activeItem == 4">6-10 месяц</h3>
+            <p class="programm__descr" v-if="activeItem == 4">Введение и основы библиотеки Vue.</p>
+
+            <div class="demo-collapse programm__dropdown" v-if="activeItem == 1">
+                <el-collapse class="programm__dropdown-content" v-model="activeNames" @change="handleChange">
                     <el-collapse-item title="HTML" name="1">
                         <div class="programm__dropdown-text">
-                            Consistent with real life: in line with the process and logic of real
-                            life, and comply with languages and habits that the users are used to;
-                        </div>
-                        <div class="programm__dropdown-text">
-                            Consistent within interface: all elements should be consistent, such
-                            as: design style, icons and texts, position of elements, etc.
+                            HTML - это стандартизированный язык разметки документов для просмотра веб-страниц в браузере. Мы будем изучать его, чтобы уметь размещать на веб-странице элементы: текст, картинки, таблицы и видео.
                         </div>
                     </el-collapse-item>
                     <el-collapse-item title="Css" name="2">
                         <div class="programm__dropdown-text">
-                            Operation feedback: enable the users to clearly perceive their
-                            operations by style updates and interactive effects;
-                        </div>
-                        <div class="programm__dropdown-text">
-                            Visual feedback: reflect current state by updating or rearranging
-                            elements of the page.
+                            (Cascading Style Sheets) - это код, который вы используете для стилизации вашей веб-страницы. Другими словами, формируете вид страницы: цвет фона и декоративных элементов, размер и стиль шрифтов.
                         </div>
                     </el-collapse-item>
                     <el-collapse-item title="Figma" name="3">
                         <div class="programm__dropdown-text">
-                            Simplify the process: keep operating process simple and intuitive;
+                            Figma - это графический онлайн-редактор для создания макетов сайтов и приложений.
                         </div>
+                        <br>
                         <div class="programm__dropdown-text">
-                            Definite and clear: enunciate your intentions clearly so that the
-                            users can quickly understand and make decisions;
+                            С помощью Figma дизайнер создает внешний вид сайта. Знание этого инструмента крайне необходимо разработчику, чтобы работать в команде с дизайнером и кодить сайт.
                         </div>
+                    </el-collapse-item>
+                </el-collapse>
+            </div>
+            <div class="demo-collapse programm__dropdown" v-if="activeItem == 2">
+                <el-collapse class="programm__dropdown-content" v-model="activeNames" @change="handleChange">
+                    <el-collapse-item title="БЭМ" name="1">
                         <div class="programm__dropdown-text">
-                            Easy to identify: the interface should be straightforward, which helps
-                            the users to identify and frees them from memorizing and recalling.
+                            Методология, созданная для разработки сайтов, которые необходимо делать быстро, а поддерживать долгие годы. Расшифровывается как «Блок, Элемент, Модификатор»
+                        </div>
+                        <br>
+                        <div class="programm__dropdown-text">
+                            Она позволяет создавать расширяемые и повторно используемые компоненты интерфейса.
+                        </div>
+                    </el-collapse-item>
+                    <el-collapse-item title="Git" name="2">
+                        <div class="programm__dropdown-text">
+                            Git - это распределённая система управления версиями проекта. Она позволяет хранить их и оперативно возвращаться в любое сохранённое состояние.
+                        </div>
+                        <br>
+                        <div class="programm__dropdown-text">
+                            Это помогает разработчикам справлять ситуации, когда при написании кода что-то сломалось и испортилось.
+                        </div>
+                    </el-collapse-item>
+                    <el-collapse-item title="GitHub" name="3">
+                        <div class="programm__dropdown-text">
+                            Github - крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки. Веб-сервис основан на системе контроля версий Git.
+                        </div>
+                        <br>
+                        <div class="programm__dropdown-text">
+                            Здесь разработчики могут изучать проекты с примерами кода других людей, размещать свое портфолио и скачивать полезные в разработке инструменты.
+                        </div>
+                    </el-collapse-item>
+                </el-collapse>
+            </div>
+            <div class="demo-collapse programm__dropdown" v-if="activeItem == 3">
+                <el-collapse class="programm__dropdown-content" v-model="activeNames" @change="handleChange">
+                    <el-collapse-item title="JavaScript" name="1">
+                        <div class="programm__dropdown-text">
+                            JavaScript - это мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили.
+                        </div>
+                        <br>
+                        <div class="programm__dropdown-text">
+                            Front-end разработчики используют его для управления элементами сайта — создание анимаций, всплывающих форм и загрузка эффектов. И все это без перезагрузки страницы.
+                        </div>
+                    </el-collapse-item>
+                </el-collapse>
+            </div>
+            <div class="demo-collapse programm__dropdown" v-if="activeItem == 4">
+                <el-collapse class="programm__dropdown-content" v-model="activeNames" @change="handleChange">
+                    <el-collapse-item title="Vue" name="1">
+                        <div class="programm__dropdown-text">
+                            Vue - это декларативная, эффективная и гибкая JavaScript-библиотека для создания пользовательских интерфейсов.
+                        </div>
+                        <br>
+                        <div class="programm__dropdown-text">
+                            Она позволяет вам собирать сложный UI из маленьких изолированных кусочков кода, называемых «компонентами».
+                        </div>
+                    </el-collapse-item>
+                    <el-collapse-item title="TypeScript" name="2">
+                        <div class="programm__dropdown-text">
+                            TypeScript - это язык программирования для веб-разработки, основанный на JavaScript.
+                        </div>
+                        <br>
+                        <div class="programm__dropdown-text">
+                            Он делает код понятнее и надежнее, добавляет статическую типизацию, а также может быть скомпилирован в JavaScript.
+                        </div>
+                    </el-collapse-item>
+                    <el-collapse-item title="SASS" name="3">
+                        <div class="programm__dropdown-text">
+                            SASS - это препроцессор CSS, продвинутый тип написания CSS. Он имеет свой синтаксис, из которого генерирует CSS-код, понятный любому браузеру.
+                        </div>
+                        <br>
+                        <div class="programm__dropdown-text">
+                            Его используют для упрощения кода CSS-кода, расширения функциональности и избегания частого повторения одинаковых фрагментов кода.
+                        </div>
+                    </el-collapse-item>
+                    <el-collapse-item title="Api" name="3">
+                        <div class="programm__dropdown-text">
+                            (Application Programming Interface) - это набор правил, определений и инструментов, которые позволяют различным программам взаимодействовать друг с другом.
+                        </div>
+                        <br>
+                        <div class="programm__dropdown-text">
+                            Он обеспечивает способ обмена информацией между различными приложениями, службами или компонентами программного обеспечения.
                         </div>
                     </el-collapse-item>
                 </el-collapse>
             </div>
         </section>
+        <Form/>
+        <Advantages/>
+        <Comfortable/>
+        <Footer/>
     </main>
 </template>
 
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
+import Form from '@/components/Form/Form.vue'
+import Footer from '@/components/Footer/Footer.vue'
+import Advantages from '@/components/Advantages/Advantages.vue'
+import Comfortable from '@/components/Comfortable/Comfortable.vue'
 
-const activeItem = ref(null);
+const activeItem = ref(1);
 const setActive = (id) => {
       activeItem.value = id;
     };
@@ -102,20 +191,47 @@ const tabItems = reactive([
     {id: 3, text: 'Модуль №3-4'},
     {id: 4, text: 'Модуль №5'},
 ])
-
-// const tabClick = (event) => {
-//     event.target.classList.add('active')
-// }
 </script>
 
 <style lang="scss">
-.active {
+.moreInfo {
+    padding: 50px 185px;
+    display: flex;
+    // justify-content: center;
+    gap: 300px;
+
+    &__title {
+        font-size: 45px;
+        font-weight: 700;
+        color: #fff;
+        // margin-right: 150px;
+    }
+
+    &__descr {
+        font-size: 30px;
+        color: #fff;
+    }
+}
+
+.activeS {
     background: blue !important;
-    color: #fff;
+    color: #fff !important;
 }
 
 .programm {
     padding: 50px 185px;
+
+    &__subtitle {
+        color: #8b8b8b;
+        font-size: 25px;
+    }
+
+    &__descr {
+        color: #fff;
+        margin-top: 5px;
+        margin-bottom: 50px;
+        font-size: 25px;
+    }
 
     &__tab {
         display: flex;
@@ -130,6 +246,7 @@ const tabItems = reactive([
             font-size: 20px;
             padding: 10px 25px;
             cursor: pointer;
+            transition: .4s;
         }
     }
 
@@ -145,6 +262,12 @@ const tabItems = reactive([
 
     &__dropdown {
     background: transparent;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 
     &-text {
         color: #fff;

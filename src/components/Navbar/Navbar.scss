@@ -1,6 +1,5 @@
 .header {
     &__nav {
-        // background: rgba(20, 20, 20, 0.5);
         background: black;
         position: fixed;
         left: 0;
@@ -9,9 +8,60 @@
         width: 100%;
         padding: 0 40px;
 
-        // &.color {
-        //     animation: scroll 1s forwards linear;
-        // }
+        &-btn {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            display: none;
+            z-index: 150;
+
+            @include media(800) {
+                display: block;
+            }
+
+            & span {
+                position: absolute;
+                left: 0;
+                top: 9px;
+                width: 100%;
+                height: 2px;
+                background: white;
+                transition: .3s;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: white;
+                position: absolute;
+                left: 0;
+                transition: .3s;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            &.active::before {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+
+            &.active::after {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+
+            &.active span {
+                width: 0;
+            }
+        }
 
         &-logo {
             position: relative;
@@ -28,14 +78,33 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 90px;
         }
 
         &-list {
             display: flex;
             align-items: center;
-            // gap: 30px;
             background: transparent;
+            gap: 30px;
+
+            @include media(800) {
+                // display: none !important;
+                position: fixed;
+                flex-direction: column;
+                top: 0;
+                left: 100%;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(7px);
+                transition: .3s;
+
+                &.active {
+                    left: 0;
+                    overflow: auto;
+                }
+            }
         }
 
         &-link {
@@ -47,9 +116,17 @@
             position: relative;
             display: flex;
             justify-content: center;
+            transition: .4s;
+
+            &-arrow {
+                margin-left: 5px;
+                width: 15px;
+                // transform: rotate(180deg);
+                // height: 10px;
+            }
 
             &:hover {
-                color: white !important;
+                color: white;
             }
         }
     }
@@ -62,5 +139,49 @@
         100% {
             background: black;
         }
+    }
+}
+
+.dropdown {
+    position: relative;
+    transition: .4s;
+
+    &:hover .header__nav-courses {
+        display: flex;
+        transition: .4s;
+    }
+
+    &:hover {
+        @include media(800) {
+            margin-bottom: 200px;
+        }
+    }
+
+    &__link {
+        color: rgba(255, 255, 255, 0.6);
+        transition: .4s;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.header__nav-courses {
+    cursor: default;
+    width: 260px;
+    display: none;
+    flex-direction: column;
+    gap: 35px;
+    position: absolute;
+    background: black;
+    top: 70px;
+    left: -55px;
+    padding: 15px 20px;
+    transition: .4s;
+    border-radius: 2%;
+
+    @include media(800) {
+        background: transparent;
     }
 }

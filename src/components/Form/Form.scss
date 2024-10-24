@@ -1,0 +1,114 @@
+input {
+    outline: none;
+    border: none;
+}
+
+.form {
+    padding: 50px 350px;
+
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 120px;
+    }
+
+    &__content {
+        width: 70%;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        // gap: 10px;
+
+        & p {
+            max-width: 65%;
+            font-size: 20px;
+            color: #fff;
+            // text-align: center;
+        }
+    }
+
+    &__form {
+        width: 40%;
+        // height: 500px;
+        position: relative;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 80px 50px;
+
+        &-btn {
+            transition: .4s;
+            color: #303030;
+            background: none;
+            outline: 2px solid #303030;
+            width: 90%;
+            padding: 15px 0;
+            text-transform: uppercase;
+            font-size: 15px;
+
+            &:hover {
+                color: #fff;
+                background: #303030;
+            }
+        }
+
+        &-stroke {
+            position: absolute;
+            top: -100px;
+            left: -60%;
+        }
+
+        &-inputs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            width: 100%;
+        }
+
+        &-input {
+            width: 100%;
+            background: none;
+            color: #151515;
+            transition: .3s;
+            border-bottom: 1px solid #c6c6c6;
+            font-size: 20px;
+        }
+
+        &-images {
+            position: relative;
+            align-self: flex-start;
+            z-index: 3;
+    
+            &-img {
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+            }
+
+            &-img:nth-last-of-type(1) {
+                position: relative;
+                opacity: .2;
+                z-index: -2;
+            }
+            &-img:nth-last-of-type(2) {
+                position: absolute;
+                top: 0;
+                opacity: .4;
+                z-index: -1;
+                left: 40px;
+            }
+            &-img:nth-last-of-type(3) {
+                position: absolute;
+                top: 0;
+                left: 80px;
+            }
+        }
+    }
+}
